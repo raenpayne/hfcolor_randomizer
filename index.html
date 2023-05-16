@@ -1,69 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>House Flipper Color Randomizer</title>  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;500;800&display=swap" rel="stylesheet">
-  <link href="colors.css" rel="stylesheet">
-	<script src=index.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;500;800&display=swap" rel="stylesheet">
+    <link href="index.css" rel="stylesheet">
+    <title>House Flipper Paint Randomizer</title>
 </head>
-<body>
-  <div class="container">
-	 <div id="top"><!-- empty row --></div>
-   <div id="left"><!-- empty column --></div>
-  
-  
-  <!-- Add main swatch and use js to randomly change the color and text to match -->
-  <main>
-    <div id="pageTitle">House Flipper Paint Randomizer</div>
-    
-    <div id="swatch1">
-      <!-- nested grid for Primary Swatch -->
-      <div id="swatchMain"></div>
-      <div id="swatchTitleMain">Primary Color</div>
-      <div id="colorNameMain">Gray Fog</div>
-      <div id="hexValueMain">#32333b</div> 
-      <!-- Button -->
-      <div id="mainButtonDiv"><button class="button" id="mainButton" onclick="changeAllStuff();">Refresh Colors</button></div>
-    </div>
-  </main>
-  
- 
-    <!-- Add swatch 2 and use js to randomly change the color and text to match -->
-  <div id="content1">
-    <div id="swatch2">
-      <!-- nested grid for Secondary Swatch -->
-      <div id="swatchSecond"></div>
-      <div id="swatchTitle2">Secondary Color</div>
-      <div id="colorName2">Light Gray</div>
-      <div id="hexValue2">#32333b</div> 
-    </div>
-  </div>
-  
-      
-      <!-- Add swatch 3 and use js to randomly change the color and text to match -->
-	<div id="content2">
-    <div id="swatch3">
-      <!-- nested grid for Tertiary Swatch -->
-      <div id="swatchThird"></div>
-      <div id="swatchTitle3">Tertiary Color</div>
-      <div id="colorName3">Orange</div>
-      <div id="hexValue3">#32333b</div> 
-    </div>
-  </div>
-  
-  
-  <div id="right"><!-- empty column --></div>
-  <div id="bottom"><!-- empty row --></div>
-  
-  <footer>
-    <p>Designed by Raen Payne &copy; 2023</p>
-    <p><a href="https://github.com/raenpayne">https://github.com/raenpayne</a></p>
-  </footer>
-  </div>
+<body>   
+        <div class="container">
+             <div id="top"><!-- empty row --></div>
+           <div id="left"><!-- empty column --></div>
+          
+          
+          <!-- Add main swatch and use js to randomly change the color and text to match -->
+          <main>
+            <div id="pageTitle">House Flipper Paint Randomizer</div>
+            
+            <div id="swatch1">
+              <!-- nested grid for Primary Swatch -->
+              <div id="swatchMain"></div>
+              <div id="swatchTitleMain">Primary Color</div>
+              <div id="colorNameMain">Gray Fog</div>
+              <div id="hexValueMain">#32333b</div> 
+              <!-- Button -->
+              <div id="mainButtonDiv"><button class="button" id="mainButton" onclick="changeAllStuff();">Refresh Colors</button></div>
+            </div>
+          </main>
+          
+         
+            <!-- Add swatch 2 and use js to randomly change the color and text to match -->
+          <div id="content1">
+            <div id="swatch2">
+              <!-- nested grid for Secondary Swatch -->
+              <div id="swatchSecond"></div>
+              <div id="swatchTitle2">Secondary Color</div>
+              <div id="colorName2">Light Gray</div>
+              <div id="hexValue2">#32333b</div> 
+            </div>
+          </div>
+          
+              
+              <!-- Add swatch 3 and use js to randomly change the color and text to match -->
+            <div id="content2">
+            <div id="swatch3">
+              <!-- nested grid for Tertiary Swatch -->
+              <div id="swatchThird"></div>
+              <div id="swatchTitle3">Tertiary Color</div>
+              <div id="colorName3">Orange</div>
+              <div id="hexValue3">#32333b</div> 
+            </div>
+          </div>
+          
+          
+          <div id="right"><!-- empty column --></div>
+          <div id="bottom"><!-- empty row --></div>
+          
+          <footer>
+            <p>Designed by Raen Payne &copy; 2023</p>
+            <p><a href="https://github.com/raenpayne">https://github.com/raenpayne</a></p>
+          </footer>
+        </div> 
+   <script src="index.js"></script>
 </body>
 </html>
