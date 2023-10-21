@@ -2,9 +2,12 @@
 	--main-radius: 5px;
 	--main-padding: 30px;
 }
+/*
+box-sizing: border-box;*/
+
 
 .page {
-  height: 100%;
+  height: 100vh;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -15,7 +18,7 @@
   overflow: auto;
   flex: 1;
 	display: grid;
-	height: 100vh;
+	height: 100%;
 	grid-template-columns: 0.7fr 1fr 1fr 0.7fr;
 	grid-template-rows: 0.5fr 2.5fr 1.5fr 1fr 0.5fr;
 	grid-template-areas: 
@@ -244,176 +247,183 @@ footer{
 /* Media Queries */
 
 @media only screen and (max-width: 550px){
+  body {
+    padding: 0;
+    margin: 0;
+  }
+
 	.container{
-		grid-template-columns: 1fr;
-		grid-template-rows: 1fr 1fr 1fr 0.1fr;
+    display: grid;
+    overflow: hidden;
+		grid-template-columns: 100vw;
+		grid-template-rows: 1fr .5fr .5fr .22fr;
 		grid-template-areas: 
 			"main"
 			"content1"
 			"content2"
 			"footer";
+    grid-gap: 0.5em;	
+    font-family: 'Montserrat Alternates', sans-serif;	
 	}
 
+  /* Page Title */
   #pageTitle {
     font-weight: 800;
     font-size: 2em;
-    padding: 0px;
+    padding: 0px 0px 40px 0px;
   }
 
-  /* Swatch Square 1 */
-  #swatchMain {
-    grid-area: swatchMain;
-    padding: 5px;
-    border: 1px solid black;
-    height: 200px;
-    width: 200px;
-  }
-  #swatchSecond {
-		height: 200px;
-		width: 200px;
-	}
-	#swatchThird{
-		height: 200px;
-		width: 200px;
-	}
-	.button {
-		width: 210px;
-    font-size: 1.3em;
-	}
-	
-  #swatch1 {
-  display: grid;
-  height: 280px;
-  border: solid 1px black;
-  padding: 5px 5px 50px 5px;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 0.5fr 0.1fr 1fr 0.2fr;
-	grid-template-areas: 
-		"swatchMain swatchTitleMain"
-		"swatchMain colorNameMain"
-    "swatchMain hexValueMain"
-    "mainButtonDiv mainButtonDiv";
-	grid-gap: 0.3rem;
-  }
-  
-  #swatch2 {
-  display: grid;
-  height: 212px;
-  /* border: solid 1px black; */
-  padding: 5px 5px 5px 5px;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 0.1fr 0.01fr 1fr;
-	grid-template-areas: 
-		"swatchSecond swatchTitle2"
-		"swatchSecond colorName2"
-    "swatchSecond hexValue2";
-	grid-gap: 0.3rem;
-  }
-
-  
-  #swatch3 {
-  display: grid;
-  height: 212px;
-  /* border: solid 1px black; */
-  padding: 5px 5px 5px 5px;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 0.1fr 0.01fr 1fr;
-	grid-template-areas: 
-		"swatchThird swatchTitle3"
-		"swatchThird colorName3"
-    "swatchThird hexValue3";
-	grid-gap: 0.3rem;
-  }
-
+/* Exterior Box */
+main{
+	background: #FFFAF2;
+	grid-area: main;
+	border-radius: var(--main-radius);
+	/* padding: var(--main-padding); */
 }
 
 
-/* scrunch at height: 1000px*/
-@media only screen and (max-height: 1000px){
-	.container{
-		grid-template-columns: 1fr;
-		grid-template-rows: auto auto auto auto;
-		grid-template-areas: 
-			"main"
-			"content1"
-			"content2"
-			"footer";
-	}
-  #pageTitle {
-    font-weight: 800;
-    font-size: 2em;
-    padding: 0px;
-  }
-
-  /* Swatch Square 1 */
-  #swatchMain {
-    grid-area: swatchMain;
-    padding: 5px;
-    /* border: 1px solid black; */
-    height: 100px;
-    width: 200px;
-  }
-  #swatchSecond {
-		height: 100px;
-		width: 200px;
-	}
-	#swatchThird{
-		height: 100px;
-		width: 200px;
-	}
-	.button {
-		width: 210px;
-    font-size: 1em;
-	}
-
-  #swatch1 {
-  display: grid;
-  border: 0px;
+/* Swatch Square 1 - Color Square Properties*/
+#swatchMain {
+  grid-area: swatchMain;
+  background-color: #32333b;
   padding: 5px;
-  height: fit-content;
+  border: 1px solid black;
+  height: 200px;
+  width: 200px;
+}
+
+/* Nested Grid 1 - Interior Boxes */
+#swatch1 {
+  display: grid;
+  height: 320px;
+  border: 0px;
+  padding: 5px 5px 50px 5px;
 	grid-template-columns: 1fr;
-	grid-template-rows: auto auto auto auto auto;
+	grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
 	grid-template-areas: 
 		"swatchMain" 
     "swatchTitleMain"
 		"colorNameMain"
     "hexValueMain"
-    "mainButtonDiv";
-	grid-gap: 0.3rem;
-  }
-
-  #swatchTitleMain {
-    grid-area: swatchTitleMain;
-    font-size: 1em;
-    font-weight: 500;
-  }
-
-  #swatch2 {
-  display: grid;
-  padding: 5px; 
-  height: fit-content;
-	grid-template-columns: 1fr;
-	grid-template-rows: auto auto auto auto;
-	grid-template-areas: 
-		"swatchSecond" 
-    "swatchTitle2"
-		"colorName2"
-    "hexValue2";
-	grid-gap: 0.3rem;
-  }
+    "mainButtonDiv";  
   
-  #swatch3 {
-  display: grid;
-  padding: 5px;
-  height: fit-content;
-	grid-template-columns: 1fr;
-	grid-template-rows: auto auto auto auto;
-	grid-template-areas: 
-		"swatchThird" 
-    "swatchTitle3"
-		"colorName3"
-    "hexValue3";
-	grid-gap: 0.3rem;
-  }
 }
 
+#swatchTitleMain {
+  grid-area: swatchTitleMain;
+  font-size: 1.2em;
+  font-weight: 800;
+}
+#colorNameMain {
+  grid-area: colorNameMain;
+}
+#hexValueMain {
+  grid-area: hexValueMain;
+}
+
+#mainButtonDiv {
+  grid-area: mainButtonDiv;
+  vertical-align: bottom;
+  
+}
+
+.button {
+  transition-duration: 0.4s ease-in-out;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  border-radius: 2px;
+  border: 0px;
+  cursor: pointer;
+  margin-top: 5px;
+  padding: 12px;
+  font-size: 14pt;
+  background-color: #D1D1D1;
+  color: black;
+}
+.button:hover, element:active {
+  background-color: #6B6B6B; 
+  color: white;
+  -webkit-tap-highlight-color: #6B6B6B;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none /*disables context menu on long press*/
+}
+
+  /* Second Swatch Styling */
+  #content1{
+    display: grid;
+    grid-area: content1;
+    background: #FFFAF2;
+    border-radius: var(--main-radius);
+    /* padding: var(--main-padding); */
+  }
+
+  #swatchSecond {
+		height: 100px;
+		width: 200px;
+	}
+
+  #swatch2 {
+    display: grid;
+    grid-area: ; /* pushes everything over to the right for some reason */
+    overflow: hidden;
+    height: 200px;
+    /* border: solid 1px black; */
+    padding: 5px 5px 5px 5px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+      "swatchSecond" 
+      "swatchTitle2"
+      "colorName2"
+      "hexValue2";
+   
+    }
+
+
+    /* Nested Grid 3 - Interior Boxes*/
+  #swatch3 {
+    display: grid;
+    overflow: hidden;
+    /* border: solid 1px black; */
+    padding: 5px 5px 5px 5px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+      "swatchThird" 
+      "swatchTitle3"
+      "colorName3"
+      "hexValue3";
+  }
+
+  /* Swatch Square 3 */
+  #swatchThird {
+    grid-area: swatchThird;
+    background-color: orange;
+    padding: 5px;
+    border: 1px solid black;
+    height: 100px;
+    width: 200px;
+  }
+  #swatchTitle3 {
+    grid-area: swatchTitle3;
+    font-size: 1.em;
+    font-weight: 500;
+  }
+  #colorName3 {
+    grid-area: colorName3;
+  }
+  #hexValue3 {
+    grid-area: hexValue3;
+  }
+
+  /* Footer */
+  footer{
+    background: #FEF3EE;
+    grid-area: footer;
+    grid-template-rows: min-content;
+    border-radius: var(--main-radius);
+    /* padding: var(--main-padding); */
+  }
+
+
+
+} /* end media query max-width 550px */
