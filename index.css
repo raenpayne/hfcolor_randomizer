@@ -79,7 +79,7 @@ main{
   border: solid 1px black;
   padding: 5px 5px 50px 5px;
 	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 0.2fr 0.1fr 22fr 0.1fr 0.1fr;
+	grid-template-rows: .1fr .01fr .01fr 1fr 1fr;
 	grid-template-areas: 
 		"swatchMain swatchTitleMain"
 		"swatchMain colorNameMain"
@@ -103,7 +103,7 @@ main{
 #mainButtonDiv {
   grid-area: mainButtonDiv;
   vertical-align: bottom;
-  
+  padding-top: 10px;
 }
 
 .button {
