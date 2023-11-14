@@ -11,4 +11,4 @@ https://codepen.io/nearly_almost/pen/JjmaGPO
 May 16th Update:  
 Made the site more mobile friendly and fixed some weird alignment issues. Also cleaned up the CSS a bit. 
 
-![HF_Randomizer_Screenshot.png](https://github.com/raenpayne/hfcolor_randomizer/blob/main/HF_Randomizer_Screenshot.png)
+![HF_Randomizer_Screenshot.png](https://github.com/raenpayne/hfcolor_randomizer/blob/main/HF%20Screenshot%20New.jpg)
